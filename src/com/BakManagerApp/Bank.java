@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class Bank {
        private static Bank INSTANCE;
        private final HashMap<Integer,Account> accounts;
-       private Bank()
+       Bank()
        {
            this.accounts = new HashMap<>();
        }
@@ -26,7 +26,7 @@ public class Bank {
               return ac.getBalance();
        }
 
-       public Account getAccountById(int accountId) throws AccountNotFoundException {
+       Account getAccountById(int accountId) throws AccountNotFoundException {
               Account ac = accounts.get(accountId);
               if (ac == null) {
                      throw new AccountNotFoundException();
