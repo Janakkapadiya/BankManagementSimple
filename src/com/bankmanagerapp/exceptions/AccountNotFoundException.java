@@ -1,4 +1,4 @@
-package com.BakManagerApp.exceptions;
+package com.bankmanagerapp.exceptions;
 
 public class AccountNotFoundException extends Exception {
     public AccountNotFoundException() {

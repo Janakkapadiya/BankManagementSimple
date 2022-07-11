@@ -1,7 +1,7 @@
-package com.BakManagerApp;
+package com.bankmanagerapp;
 
-import com.BakManagerApp.exceptions.AccountNotFoundException;
-import com.BakManagerApp.exceptions.NotSufficientAmountException;
+import com.bankmanagerapp.exceptions.AccountNotFoundException;
+import com.bankmanagerapp.exceptions.NotSufficientAmountException;
 
 import java.util.HashMap;
 
@@ -26,12 +26,16 @@ public class Bank {
               return ac.getBalance();
        }
 
-       Account getAccountById(int accountId) throws AccountNotFoundException {
+       public Account getAccountById(int accountId) throws AccountNotFoundException {
               Account ac = accounts.get(accountId);
               if (ac == null) {
                      throw new AccountNotFoundException();
               }
               return ac;
+       }
+
+       public void checkIsAccountExist(int accountId) throws AccountNotFoundException {
+              getAccountById(accountId);
        }
 
        public void withdraw(int accountId, int amount)

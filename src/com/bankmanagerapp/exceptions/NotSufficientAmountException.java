@@ -1,4 +1,4 @@
-package com.BakManagerApp.exceptions;
+package com.bankmanagerapp.exceptions;
 
 public class NotSufficientAmountException extends Exception {
 

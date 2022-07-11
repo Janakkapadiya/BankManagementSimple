@@ -1,11 +1,11 @@
-package com.BakManagerApp;
-import com.BakManagerApp.exceptions.NotSufficientAmountException;
+package com.bankmanagerapp;
+import com.bankmanagerapp.exceptions.NotSufficientAmountException;
 public class Account {
     private int accountId;
     private String acc_holder;
     private int balance;
 
-    public static int account_count = 1;
+    private static int account_count = 1;
 
     public int getAccountId() {
         return accountId;
